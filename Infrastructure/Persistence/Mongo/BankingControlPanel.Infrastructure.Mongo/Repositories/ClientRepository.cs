@@ -73,15 +73,10 @@ namespace BankingControlPanel.Infrastructure.Persistence.Mongo.Repositories
             }
         }
 
-        public async Task<IEnumerable<Client>> GetClientByEmailAsync(string email)
+        public async Task<Client> GetClientByEmailAsync(string email)
         {
-            if (string.IsNullOrEmpty(email))
-            {
-                return new List<Client>();
-            }
-
             var filter = Builders<Client>.Filter.Eq(client => client.Email, email);
-            return await _clients.Find(filter).ToListAsync();
+            return await _clients.Find(filter).FirstOrDefaultAsync();
         }
     }
 }

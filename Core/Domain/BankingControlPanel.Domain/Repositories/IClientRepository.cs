@@ -15,6 +15,6 @@ namespace BankingControlPanel.Domain.Repositories
 
         Task DeleteAsync(Guid id);
 
-        Task<IEnumerable<Client>> GetClientByEmailAsync(string email);
+        Task<Client> GetClientByEmailAsync(string email);
     }
 }

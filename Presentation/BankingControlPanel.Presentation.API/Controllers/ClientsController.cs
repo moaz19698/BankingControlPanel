@@ -4,11 +4,13 @@ using BankingControlPanel.Application.Clients.Commands.UpdateClient;
 using BankingControlPanel.Application.Clients.Dtos;
 using BankingControlPanel.Application.Clients.Queries.GetClientById;
 using BankingControlPanel.Application.Clients.Queries.GetClients;
+using BankingControlPanel.Presentation.API.Filters;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BankingControlPanel.Presentation.API.Controllers
 {
+    [Authorize("admin")]
     [ApiController]
     [Route("api/[controller]/[action]")]
     public class ClientsController : ControllerBase

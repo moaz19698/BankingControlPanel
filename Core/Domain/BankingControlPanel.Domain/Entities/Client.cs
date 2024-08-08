@@ -102,6 +102,6 @@ namespace BankingControlPanel.Domain.Entities
             new System.ComponentModel.DataAnnotations.EmailAddressAttribute().IsValid(email);
 
         private bool IsValidMobileNumber(string mobileNumber) =>
-            System.Text.RegularExpressions.Regex.IsMatch(mobileNumber, @"^\+\d{1,3}\d{10}$");
+            System.Text.RegularExpressions.Regex.IsMatch(mobileNumber, @"^\+[1-9]\d{1,14}$");
     }
 }

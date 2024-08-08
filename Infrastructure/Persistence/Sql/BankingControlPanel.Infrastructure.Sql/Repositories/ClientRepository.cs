@@ -90,16 +90,12 @@ namespace BankingControlPanel.Infrastructure.Persistence.Sql.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<Client>> GetClientByEmailAsync(string email)
+        public async Task<Client> GetClientByEmailAsync(string email)
         {
-            if (string.IsNullOrEmpty(email))
-            {
-                return Enumerable.Empty<Client>();
-            }
 
             return await _context.Clients
                 .Where(client => client.Email == email)
-                .ToListAsync();
+                .FirstOrDefaultAsync();
         }
     }
 
