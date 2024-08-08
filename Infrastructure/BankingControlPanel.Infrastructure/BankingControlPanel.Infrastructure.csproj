@@ -7,7 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="MediatR" Version="12.4.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\Core\Application\BankingControlPanel.Application\BankingControlPanel.Application.csproj" />
+    <ProjectReference Include="..\Persistence\Mongo\BankingControlPanel.Infrastructure.Mongo\BankingControlPanel.Infrastructure.Persistence.Mongo.csproj" />
+    <ProjectReference Include="..\Persistence\Sql\BankingControlPanel.Infrastructure.Sql\BankingControlPanel.Infrastructure.Persistence.Sql.csproj" />
   </ItemGroup>
 
 </Project>

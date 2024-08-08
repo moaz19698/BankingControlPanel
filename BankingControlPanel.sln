@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankingControlPanel.Domain", "Core\Domain\BankingControlPanel.Domain\BankingControlPanel.Domain.csproj", "{D96C9FC4-9DD2-4B2C-987E-71166EBFF8F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankingControlPanel.Domain", "Core\Domain\BankingControlPanel.Domain\BankingControlPanel.Domain.csproj", "{D96C9FC4-9DD2-4B2C-987E-71166EBFF8F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankingControlPanel.Application", "Core\Application\BankingControlPanel.Application\BankingControlPanel.Application.csproj", "{AF614464-F511-41AB-9519-BD4B7BA0EB69}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankingControlPanel.Application", "Core\Application\BankingControlPanel.Application\BankingControlPanel.Application.csproj", "{AF614464-F511-41AB-9519-BD4B7BA0EB69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankingControlPanel.Infrastructure", "Infrastructure\BankingControlPanel.Infrastructure\BankingControlPanel.Infrastructure.csproj", "{31F8E1D1-2F3D-426B-B9BF-857628E4B132}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankingControlPanel.Infrastructure", "Infrastructure\BankingControlPanel.Infrastructure\BankingControlPanel.Infrastructure.csproj", "{31F8E1D1-2F3D-426B-B9BF-857628E4B132}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankingControlPanel.Presentation.API", "Presentation\BankingControlPanel.Presentation.API\BankingControlPanel.Presentation.API.csproj", "{0A0ADD56-E27A-40F5-86DF-5411E0AEE003}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankingControlPanel.Presentation.API", "Presentation\BankingControlPanel.Presentation.API\BankingControlPanel.Presentation.API.csproj", "{0A0ADD56-E27A-40F5-86DF-5411E0AEE003}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{D5B32034-7CB3-4BC1-89E2-85596AC7F199}"
 EndProject
@@ -20,6 +20,16 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrasturcture", "Infrasturcture", "{89949686-1F75-4C54-8004-919CE5CC82AA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{AFE68845-6DFB-4DC5-93B0-62FDA7573C26}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persistence", "Persistence", "{6243A529-94FE-47E1-8752-CFD576219827}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sql", "Sql", "{379F5986-4EA4-4979-8FBB-6E58DBEAA980}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mongo", "Mongo", "{77224255-85FF-4BB4-8044-0B14E606D337}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankingControlPanel.Infrastructure.Persistence.Sql", "Infrastructure\Persistence\Sql\BankingControlPanel.Infrastructure.Sql\BankingControlPanel.Infrastructure.Persistence.Sql.csproj", "{39C1D184-6699-47F8-B26F-21191144B123}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankingControlPanel.Infrastructure.Persistence.Mongo", "Infrastructure\Persistence\Mongo\BankingControlPanel.Infrastructure.Mongo\BankingControlPanel.Infrastructure.Persistence.Mongo.csproj", "{E77CC855-6148-4102-BB7B-7C9D4BBB794B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +53,14 @@ Global
 		{0A0ADD56-E27A-40F5-86DF-5411E0AEE003}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A0ADD56-E27A-40F5-86DF-5411E0AEE003}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A0ADD56-E27A-40F5-86DF-5411E0AEE003}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39C1D184-6699-47F8-B26F-21191144B123}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39C1D184-6699-47F8-B26F-21191144B123}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39C1D184-6699-47F8-B26F-21191144B123}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39C1D184-6699-47F8-B26F-21191144B123}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E77CC855-6148-4102-BB7B-7C9D4BBB794B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E77CC855-6148-4102-BB7B-7C9D4BBB794B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E77CC855-6148-4102-BB7B-7C9D4BBB794B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E77CC855-6148-4102-BB7B-7C9D4BBB794B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,6 +72,11 @@ Global
 		{0A0ADD56-E27A-40F5-86DF-5411E0AEE003} = {AFE68845-6DFB-4DC5-93B0-62FDA7573C26}
 		{AD96C5DA-6BD1-43E7-B0C8-C664D7B4A54D} = {D5B32034-7CB3-4BC1-89E2-85596AC7F199}
 		{333F5725-1411-43B7-B9D4-7B83B2897DE3} = {D5B32034-7CB3-4BC1-89E2-85596AC7F199}
+		{6243A529-94FE-47E1-8752-CFD576219827} = {89949686-1F75-4C54-8004-919CE5CC82AA}
+		{379F5986-4EA4-4979-8FBB-6E58DBEAA980} = {6243A529-94FE-47E1-8752-CFD576219827}
+		{77224255-85FF-4BB4-8044-0B14E606D337} = {6243A529-94FE-47E1-8752-CFD576219827}
+		{39C1D184-6699-47F8-B26F-21191144B123} = {379F5986-4EA4-4979-8FBB-6E58DBEAA980}
+		{E77CC855-6148-4102-BB7B-7C9D4BBB794B} = {77224255-85FF-4BB4-8044-0B14E606D337}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8B889AD8-FF78-4A96-A984-E6B0D4C8C038}
