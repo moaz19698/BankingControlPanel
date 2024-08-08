@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BankingControlPanel.Domain.Entities
+﻿namespace BankingControlPanel.Domain.Entities
 {
     public class Role
     {
@@ -23,7 +17,8 @@ namespace BankingControlPanel.Domain.Entities
             Description = description;
             Users = new List<User>();
         }
-        public Role(Guid id,string name, string description)
+
+        public Role(Guid id, string name, string description)
         {
             Id = id;
             Name = name;

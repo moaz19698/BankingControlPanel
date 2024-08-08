@@ -4,11 +4,6 @@ using BankingControlPanel.Domain.Entities;
 using BankingControlPanel.Domain.Repositories;
 using BankingControlPanel.Infrastructure.Persistence.Sql.Data;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BankingControlPanel.Infrastructure.Persistence.Sql.Repositories
 {
@@ -130,5 +125,4 @@ namespace BankingControlPanel.Infrastructure.Persistence.Sql.Repositories
             return System.Linq.Expressions.Expression.Lambda<System.Func<T, object>>(convert, parameter);
         }
     }
-
 }

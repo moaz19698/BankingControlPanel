@@ -1,19 +1,12 @@
-﻿using BankingControlPanel.Application.Common.Interfaces;
-using BankingControlPanel.Domain.Entities;
+﻿using BankingControlPanel.Domain.Entities;
 using BankingControlPanel.Domain.ValueObjects;
 using BankingControlPanel.Infrastructure.Persistence.Sql.Common;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BankingControlPanel.Infrastructure.Persistence.Sql.Data
 {
     public class ApplicationDbContext : DbContext
     {
-
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
@@ -25,7 +18,9 @@ namespace BankingControlPanel.Infrastructure.Persistence.Sql.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
             #region Client
+
             modelBuilder.Entity<Client>(entity =>
             {
                 entity.ToTable("Clients");
@@ -89,20 +84,21 @@ namespace BankingControlPanel.Infrastructure.Persistence.Sql.Data
             var userRoleId = Guid.NewGuid();
 
             modelBuilder.Entity<Role>().HasData(
-                new Role (new Guid(DefaultRoles.AdminRoleId),"Admin","Admin"),
-                new Role (new Guid(DefaultRoles.UserRoleId),"User","User")
+                new Role(new Guid(DefaultRoles.AdminRoleId), "Admin", "Admin"),
+                new Role(new Guid(DefaultRoles.UserRoleId), "User", "User")
             );
 
             // Seeding Users
 
             modelBuilder.Entity<User>().HasData(
-                new User("admin","admin@test.com", DefaultUserPasswords.AdminPasswordHash,"Admin","Admin",new Guid(DefaultRoles.AdminRoleId))
+                new User("admin", "admin@test.com", DefaultUserPasswords.AdminPasswordHash, "Admin", "Admin", new Guid(DefaultRoles.AdminRoleId))
                 ,
-                new User("user","user@test.com", DefaultUserPasswords.UserPasswordHash,"User","User",new Guid(DefaultRoles.UserRoleId))
+                new User("user", "user@test.com", DefaultUserPasswords.UserPasswordHash, "User", "User", new Guid(DefaultRoles.UserRoleId))
             );
-            #endregion
+
+            #endregion Client
+
             base.OnModelCreating(modelBuilder);
         }
     }
 }
-

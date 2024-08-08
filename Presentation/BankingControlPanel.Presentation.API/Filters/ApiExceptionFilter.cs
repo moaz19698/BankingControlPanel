@@ -1,7 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc.Filters;
+﻿using BankingControlPanel.Application.Common.Exceptions;
 using Microsoft.AspNetCore.Mvc;
-using System.ComponentModel.DataAnnotations;
-using BankingControlPanel.Application.Common.Exceptions;
+using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace BankingControlPanel.Presentation.API.Filters
 {

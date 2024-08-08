@@ -1,11 +1,6 @@
 ﻿using BankingControlPanel.Application.Clients.Repositories;
 using BankingControlPanel.Application.Common.Exceptions;
 using BankingControlPanel.Application.Common.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BankingControlPanel.Infrastructure.Services
 {
@@ -37,5 +32,4 @@ namespace BankingControlPanel.Infrastructure.Services
             return _tokenGenerator.GenerateToken(user.Id.ToString(), user.Email, user.Role.Name);
         }
     }
-
 }

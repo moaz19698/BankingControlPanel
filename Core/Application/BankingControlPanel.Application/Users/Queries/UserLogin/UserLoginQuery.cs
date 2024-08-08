@@ -1,10 +1,4 @@
-﻿using BankingControlPanel.Application.Clients.Dtos;
-using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MediatR;
 
 namespace BankingControlPanel.Application.Clients.Queries.GetClientById
 {

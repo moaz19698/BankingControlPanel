@@ -1,11 +1,6 @@
 ﻿using BankingControlPanel.Application.Clients.Dtos;
 using BankingControlPanel.Domain.DTOs.Clients;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BankingControlPanel.Application.Clients.Queries.GetClients
 {
@@ -13,8 +8,9 @@ namespace BankingControlPanel.Application.Clients.Queries.GetClients
     {
         public GetClientsQuery()
         {
-            Filter=new ClientFilterDto();
+            Filter = new ClientFilterDto();
         }
+
         public ClientFilterDto Filter { get; set; }
     }
 }

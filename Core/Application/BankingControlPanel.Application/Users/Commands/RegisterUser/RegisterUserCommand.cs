@@ -1,9 +1,4 @@
 ﻿using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BankingControlPanel.Application.Users.Commands.RegisterUser
 {
@@ -31,6 +26,5 @@ namespace BankingControlPanel.Application.Users.Commands.RegisterUser
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Role { get; set; } // ID of the Role to assign
-
     }
 }

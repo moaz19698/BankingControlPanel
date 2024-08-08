@@ -4,13 +4,7 @@ using BankingControlPanel.Application.Common.Interfaces;
 using BankingControlPanel.Application.Users.Exceptions;
 using BankingControlPanel.Domain.Entities;
 using BankingControlPanel.Domain.Repositories;
-using BankingControlPanel.Domain.ValueObjects;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BankingControlPanel.Application.Users.Commands.RegisterUser
 {
@@ -20,7 +14,7 @@ namespace BankingControlPanel.Application.Users.Commands.RegisterUser
         private readonly IRoleRepository _roleRepository;
         private readonly IPasswordHasher _passwordHasher;
 
-        public RegisterUserCommandHandler(IUserRepository userRepository,IRoleRepository roleRepository, IPasswordHasher passwordHasher)
+        public RegisterUserCommandHandler(IUserRepository userRepository, IRoleRepository roleRepository, IPasswordHasher passwordHasher)
         {
             _userRepository = userRepository;
             _roleRepository = roleRepository;

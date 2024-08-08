@@ -1,15 +1,12 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+
 namespace BankingControlPanel.Presentation.API.Extensions
 {
     public static class DependencyRegister
     {
-        public static IServiceCollection AddAPIPresentation(this IServiceCollection services,IConfiguration configuration)
+        public static IServiceCollection AddAPIPresentation(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddAuthentication(options =>
             {
@@ -28,7 +25,6 @@ namespace BankingControlPanel.Presentation.API.Extensions
                     IssuerSigningKey = new SymmetricSecurityKey(key)
                 };
             });
-
 
             return services;
         }

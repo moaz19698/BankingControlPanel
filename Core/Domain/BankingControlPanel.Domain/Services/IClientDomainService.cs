@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BankingControlPanel.Domain.Services
+﻿namespace BankingControlPanel.Domain.Services
 {
     internal class IClientDomainService
     {

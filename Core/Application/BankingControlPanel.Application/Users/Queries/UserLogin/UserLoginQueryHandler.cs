@@ -1,16 +1,13 @@
 ﻿using BankingControlPanel.Application.Clients.Queries.GetClientById;
 using BankingControlPanel.Application.Clients.Repositories;
-using BankingControlPanel.Application.Common.Exceptions;
 using BankingControlPanel.Application.Common.Interfaces;
 using BankingControlPanel.Application.Users.Exceptions;
 using MediatR;
-
 
 namespace BankingControlPanel.Application.Users.Queries.UserLogin
 {
     public class UserLoginQueryHandler : IRequestHandler<UserLoginQuery, string>
     {
-
         private readonly IUserRepository _userRepository;
         private readonly IPasswordHasher _passwordHasher;
         private readonly IJwtTokenGenerator _jwtTokenGenerator;
@@ -35,4 +32,3 @@ namespace BankingControlPanel.Application.Users.Queries.UserLogin
         }
     }
 }
-

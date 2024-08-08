@@ -1,6 +1,7 @@
 ﻿using BankingControlPanel.Application.Clients.Commands.CreateClient;
 using BankingControlPanel.Application.Clients.Commands.DeleteClient;
 using BankingControlPanel.Application.Clients.Commands.UpdateClient;
+using BankingControlPanel.Application.Clients.Dtos;
 using BankingControlPanel.Application.Clients.Queries.GetClientById;
 using BankingControlPanel.Application.Clients.Queries.GetClients;
 using MediatR;
@@ -9,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace BankingControlPanel.Presentation.API.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     public class ClientsController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -20,6 +21,7 @@ namespace BankingControlPanel.Presentation.API.Controllers
         }
 
         [HttpGet("{id}")]
+        [ProducesResponseType(typeof(ClientDto), 200)]
         public async Task<IActionResult> GetClientById(Guid id)
         {
             var client = await _mediator.Send(new GetClientByIdQuery(id));
@@ -27,6 +29,7 @@ namespace BankingControlPanel.Presentation.API.Controllers
         }
 
         [HttpGet]
+        [ProducesResponseType(typeof(IEnumerable<ClientDto>), 200)]
         public async Task<IActionResult> GetClients([FromQuery] GetClientsQuery query)
         {
             var clients = await _mediator.Send(query);
@@ -34,6 +37,7 @@ namespace BankingControlPanel.Presentation.API.Controllers
         }
 
         [HttpPost]
+        [ProducesResponseType(typeof(Guid), 201)]
         public async Task<IActionResult> CreateClient(CreateClientCommand command)
         {
             var clientId = await _mediator.Send(command);

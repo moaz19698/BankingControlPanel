@@ -2,11 +2,6 @@
 using BankingControlPanel.Domain.Repositories;
 using BankingControlPanel.Domain.ValueObjects;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BankingControlPanel.Application.Clients.Commands.UpdateClient
 {
@@ -21,7 +16,6 @@ namespace BankingControlPanel.Application.Clients.Commands.UpdateClient
 
         public async Task<Unit> Handle(UpdateClientCommand request, CancellationToken cancellationToken)
         {
-            
             var client = await _clientRepository.GetByIdAsync(request.Id);
             if (client == null)
             {

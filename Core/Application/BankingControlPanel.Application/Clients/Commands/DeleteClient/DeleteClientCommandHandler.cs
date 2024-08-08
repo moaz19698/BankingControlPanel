@@ -1,11 +1,6 @@
 ﻿using BankingControlPanel.Application.Clients.Exceptions;
 using BankingControlPanel.Domain.Repositories;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BankingControlPanel.Application.Clients.Commands.DeleteClient
 {

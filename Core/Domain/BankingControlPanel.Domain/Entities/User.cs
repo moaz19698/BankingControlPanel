@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BankingControlPanel.Domain.Entities
+﻿namespace BankingControlPanel.Domain.Entities
 {
     public class User
     {
@@ -17,13 +11,14 @@ namespace BankingControlPanel.Domain.Entities
 
         // Foreign key and navigation property for role
         public Guid RoleId { get; private set; }
+
         public virtual Role Role { get; private set; }
 
         // Constructor
         public User()
         {
-            
         }
+
         public User(string userName, string email, string passwordHash, string firstName, string lastName, Guid roleId)
         {
             Id = Guid.NewGuid();

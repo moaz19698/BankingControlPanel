@@ -1,11 +1,6 @@
 ﻿using BankingControlPanel.Application.Clients.Commands.CreateClient;
 using BankingControlPanel.Application.Clients.Dtos;
 using FluentValidation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BankingControlPanel.Application.Clients.Validators
 {
